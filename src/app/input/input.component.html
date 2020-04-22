@@ -1,3 +1,8 @@
+<h2>INPUT PAGE</h2>
 <p>
-input works!
+Jurusan = <input [(ngModel)]="a" type="text">
 </p>
+<p>
+Deskripsi = <input [(ngModel)]="b" type="text">
+</p>
+<button (click) = "appComponent.inputData(a, b)">Input</button>

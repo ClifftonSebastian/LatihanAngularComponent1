@@ -7,7 +7,8 @@ import { Router } from '@angular/router'
 })
 export class AppComponent  {
   name = 'Cliffton';
-
+  jurusan = ["NAMA", "Desk"];
+  listjurusan = [];
   constructor(private router : Router){};
 
   Input(){
@@ -18,5 +19,12 @@ export class AppComponent  {
   }
   List(){
     this.router.navigate(['/list']);
+  }
+  getList(){
+    return this.listjurusan;
+  }
+  inputData(nama, desk){
+    this.jurusan = [nama, desk];
+    this.listjurusan.push(this.jurusan);
   }
 }

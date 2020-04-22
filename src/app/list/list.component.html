@@ -1,3 +1,6 @@
-<p>
-list works!
-</p>
+<h2>LIST PAGE</h2>
+<div *ngFor = "let row of list; let i = index">
+  Jurusan ke - {{i+1}} <br>
+  Nama Jurusan  = {{row[0]}}<br>
+  Penjelasan : {{row[1]}}<br><br>
+</div>
