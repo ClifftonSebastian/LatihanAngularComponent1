@@ -20,11 +20,14 @@ export class AppComponent  {
   List(){
     this.router.navigate(['/list']);
   }
-  getList(){
-    return this.listjurusan;
-  }
   inputData(nama, desk){
     this.jurusan = [nama, desk];
     this.listjurusan.push(this.jurusan);
+  }
+  editData(index, desk){
+    this.listjurusan[index][1] = desk
+  }
+  getList(){
+    return this.listjurusan;
   }
 }
